@@ -51,7 +51,7 @@ jobs:
           cat ~/.AutoSignMachine/taskFile* || true
       - name: Drop secret
         env:
-          UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG }}
+          UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG1 }}
         run: |
           [ -f "./config/.env" ] && cat ./config/.env | grep -o '.\{4\}$' || true
           echo $UNICOM_CONFIG | base64 -d > ./config/.env
