@@ -1,11 +1,11 @@
 name: CRON
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: "0,30 * * * *"
+#  push:
+#    branches:
+#      - main
+#  schedule:
+#   - cron: "0,30 * * * *"
 
 concurrency: ci-cron
 
@@ -65,7 +65,7 @@ jobs:
           node index.js unicom
           cat ~/.AutoSignMachine/taskFile* || true
 
-      - name: 运行帐号1
+      - name: 运行帐号2
         env:
           UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG2 }}
         run: |
@@ -81,7 +81,7 @@ jobs:
           node index.js unicom
           cat ~/.AutoSignMachine/taskFile* || true
 
-      - name: 运行帐号1
+      - name: 运行帐号3
         env:
           UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG3 }}
         run: |
