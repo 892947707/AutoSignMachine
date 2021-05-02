@@ -49,8 +49,7 @@ jobs:
           ls -l
           ls -la ~/.AutoSignMachine/ || true
           cat ~/.AutoSignMachine/taskFile* || true
-          
-      - name: 执行帐号1
+      - name: Drop secret
         env:
           UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG1 }}
         run: |
@@ -106,8 +105,7 @@ jobs:
           ls -l
           ls -la ~/.AutoSignMachine/ || true
           cat ~/.AutoSignMachine/taskFile* || true
-
-      - name: 执行帐号2
+      - name: Drop secret
         env:
           UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG2 }}
         run: |
@@ -163,8 +161,7 @@ jobs:
           ls -l
           ls -la ~/.AutoSignMachine/ || true
           cat ~/.AutoSignMachine/taskFile* || true
-          
-      - name: 执行帐号3
+      - name: Drop secret
         env:
           UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG3 }}
         run: |
