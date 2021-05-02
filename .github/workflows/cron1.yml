@@ -66,7 +66,7 @@ jobs:
           cat ~/.AutoSignMachine/taskFile* || true
 
 jobs:
-  install-and-run:
+  install-and-run2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -122,7 +122,7 @@ jobs:
           cat ~/.AutoSignMachine/taskFile* || true
 
 jobs:
-  install-and-run:
+  install-and-run3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
