@@ -50,41 +50,9 @@ jobs:
           ls -la ~/.AutoSignMachine/ || true
           cat ~/.AutoSignMachine/taskFile* || true
           
-      - name: 执行帐号1
+      - name: 执行帐号
         env:
-          UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG1 }}
-        run: |
-          [ -f "./config/.env" ] && cat ./config/.env | grep -o '.\{4\}$' || true
-          echo $UNICOM_CONFIG | base64 -d > ./config/.env
-          [ -f "./config/.env" ] && cat ./config/.env | grep -o '.\{4\}$' || true
-      - name: Run task
-        env:
-          DEBUG_MODE: ${{ secrets.DEBUG_MODE }}
-        run: |
-          [ -f "./config/.env" ] && cat ./config/.env | grep -o '.\{4\}$' || true
-          cat ~/.AutoSignMachine/taskFile* || true
-          node index.js unicom
-          cat ~/.AutoSignMachine/taskFile* || true
-
-      - name: 执行帐号2
-        env:
-          UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG2 }}
-        run: |
-          [ -f "./config/.env" ] && cat ./config/.env | grep -o '.\{4\}$' || true
-          echo $UNICOM_CONFIG | base64 -d > ./config/.env
-          [ -f "./config/.env" ] && cat ./config/.env | grep -o '.\{4\}$' || true
-      - name: Run task
-        env:
-          DEBUG_MODE: ${{ secrets.DEBUG_MODE }}
-        run: |
-          [ -f "./config/.env" ] && cat ./config/.env | grep -o '.\{4\}$' || true
-          cat ~/.AutoSignMachine/taskFile* || true
-          node index.js unicom
-          cat ~/.AutoSignMachine/taskFile* || true
-
-      - name: 执行帐号3
-        env:
-          UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG3 }}
+          UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG }}
         run: |
           [ -f "./config/.env" ] && cat ./config/.env | grep -o '.\{4\}$' || true
           echo $UNICOM_CONFIG | base64 -d > ./config/.env
