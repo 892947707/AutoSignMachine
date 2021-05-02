@@ -53,7 +53,7 @@ jobs:
       - name: 执行帐号1
         env:
           UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG1 }}
-          CONFIG: $1.env
+          CONFIG: 1.env
         run: |
           [ -f "./config/$CONFIG" ] && cat ./config/$CONFIG | grep -o '.\{4\}$' || true
           echo $UNICOM_CONFIG | base64 -d > ./config/$CONFIG
@@ -61,7 +61,7 @@ jobs:
       - name: Run task
         env:
           DEBUG_MODE: ${{ secrets.DEBUG_MODE }}
-          CONFIG: $1.env
+          CONFIG: 1.env
         run: |
           [ -f "./config/$CONFIG" ] && cat ./config/$CONFIG | grep -o '.\{4\}$' || true
           cat ~/.AutoSignMachine/taskFile* || true
@@ -71,7 +71,7 @@ jobs:
       - name: 执行帐号2
         env:
           UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG2 }}
-          CONFIG: $2.env
+          CONFIG: 2.env
         run: |
           [ -f "./config/$CONFIG" ] && cat ./config/$CONFIG | grep -o '.\{4\}$' || true
           echo $UNICOM_CONFIG | base64 -d > ./config/$CONFIG
@@ -79,7 +79,7 @@ jobs:
       - name: Run task
         env:
           DEBUG_MODE: ${{ secrets.DEBUG_MODE }}
-          CONFIG: $2.env
+          CONFIG: 2.env
         run: |
           [ -f "./config/$CONFIG" ] && cat ./config/$CONFIG | grep -o '.\{4\}$' || true
           cat ~/.AutoSignMachine/taskFile* || true
@@ -89,7 +89,7 @@ jobs:
       - name: 执行帐号3
         env:
           UNICOM_CONFIG: ${{ secrets.UNICOM_CONFIG3 }}
-          CONFIG: $3.env
+          CONFIG: 3.env
         run: |
           [ -f "./config/$CONFIG" ] && cat ./config/$CONFIG | grep -o '.\{4\}$' || true
           echo $UNICOM_CONFIG | base64 -d > ./config/$CONFIG
@@ -97,7 +97,7 @@ jobs:
       - name: Run task
         env:
           DEBUG_MODE: ${{ secrets.DEBUG_MODE }}
-          CONFIG: $3.env
+          CONFIG: 3.env
         run: |
           [ -f "./config/$CONFIG" ] && cat ./config/$CONFIG | grep -o '.\{4\}$' || true
           cat ~/.AutoSignMachine/taskFile* || true
