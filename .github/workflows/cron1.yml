@@ -64,11 +64,6 @@ jobs:
           cat ~/.AutoSignMachine/taskFile* || true
           node index.js unicom
           cat ~/.AutoSignMachine/taskFile* || true
-      - name: Delete workflow runs
-        uses: GitRML/delete-workflow-runs@main
-        with:
-          retain_days: 2
-          keep_minimum_runs: 12
 
   install-and-run2:
     runs-on: ubuntu-latest
