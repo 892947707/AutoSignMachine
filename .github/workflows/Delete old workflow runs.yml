@@ -7,7 +7,7 @@ on:
         required: true
         default: 30
   schedule:
-    - cron: '59 14 * * *'
+    - cron: '9 * * * *'
 
 jobs:
   del_runs:
