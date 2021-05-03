@@ -11,7 +11,7 @@ on:
         required: true
         default: '6'
   schedule:
-    - cron: '0,30 * * * *'
+    - cron: '59 15 * * *'
 
 jobs:
   del_runs:
