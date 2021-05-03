@@ -1,9 +1,9 @@
 name: CRON
 
 on:
-#  push:
-#    branches:
-#      - main
+  push:
+    branches:
+      - master
 #  schedule:
 #    - cron: "0,30 * * * *"
 
