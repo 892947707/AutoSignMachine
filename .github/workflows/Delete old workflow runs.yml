@@ -10,8 +10,6 @@ on:
         description: 'Number of runs.'
         required: true
         default: '10'
-  schedule:
-    - cron: '59 15 * * *'
 
 jobs:
   del_runs:
