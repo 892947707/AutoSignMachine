@@ -175,7 +175,7 @@ jobs:
           node index.js unicom
           cat ~/.AutoSignMachine/taskFile* || true
 
-  install-and-run3:
+  install-and-run4:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
